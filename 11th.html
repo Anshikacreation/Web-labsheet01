@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CSS Types</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Internal CSS -->
+    <style>
+        h1 {
+            color: blue;
+            text-align: center;
+        }
+        
+        label {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Contact Form</h1>
+
+        <form>
+
+            <label>Name</label><br>
+
+            <!-- Inline CSS -->
+            <input type="text" style="border: 2px solid green; padding: 10px;" placeholder="Enter your name">
+
+            <br><br>
+
+            <label>Email</label><br>
+            <input type="email" placeholder="Enter your email">
+
+            <br><br>
+
+            <label>Message</label><br>
+            <textarea placeholder="Write your message"></textarea>
+
+            <br><br>
+
+            <button type="submit">Send Message</button>
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>

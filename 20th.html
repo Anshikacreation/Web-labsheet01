@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Multi Step Onboarding</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #eef2ff;
+            padding: 40px;
+        }
+        
+        .container {
+            max-width: 500px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+        }
+        
+        .step {
+            display: none;
+        }
+        
+        .step.active {
+            display: block;
+        }
+        
+        input {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0 20px;
+        }
+        
+        button {
+            padding: 10px 20px;
+            background: #2563eb;
+            color: white;
+            border: none;
+            margin-right: 5px;
+            cursor: pointer;
+        }
+        
+        .progress {
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h2>User Onboarding</h2>
+
+        <div class="progress" id="progress">
+            Step 1 of 3
+        </div>
+
+        <!-- Step 1 -->
+        <div class="step active">
+
+            <h3>Personal Information</h3>
+
+            <input type="text" placeholder="Enter your name">
+            <input type="email" placeholder="Enter your email">
+
+            <button onclick="nextStep()">Next</button>
+
+        </div>
+
+        <!-- Step 2 -->
+        <div class="step">
+
+            <h3>Account Details</h3>
+
+            <input type="text" placeholder="Username">
+            <input type="password" placeholder="Password">
+
+            <button onclick="previousStep()">Back</button>
+            <button onclick="nextStep()">Next</button>
+
+        </div>
+
+        <!-- Step 3 -->
+        <div class="step">
+
+            <h3>Complete</h3>
+
+            <p>Your registration is almost complete.</p>
+
+            <button onclick="previousStep()">Back</button>
+            <button onclick="finish()">Finish</button>
+
+        </div>
+
+    </div>
+
+    <script>
+        let currentStep = 0;
+
+        const steps = document.querySelectorAll(".step");
+
+        function showStep() {
+
+            steps.forEach(function(step) {
+                step.classList.remove("active");
+            });
+
+            steps[currentStep].classList.add("active");
+
+            document.getElementById("progress").textContent =
+                "Step " + (currentStep + 1) + " of " + steps.length;
+        }
+
+        function nextStep() {
+
+            if (currentStep < steps.length - 1) {
+                currentStep++;
+                showStep();
+            }
+        }
+
+        function previousStep() {
+
+            if (currentStep > 0) {
+                currentStep--;
+                showStep();
+            }
+        }
+
+        function finish() {
+            alert("Registration completed successfully!");
+        }
+    </script>
+
+</body>
+
+</html>

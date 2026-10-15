@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Hidden Input Form</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #f1f5f9;
+            padding: 50px;
+        }
+        
+        .container {
+            max-width: 450px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+        }
+        
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            box-sizing: border-box;
+        }
+        
+        button {
+            padding: 12px 25px;
+            background: #2563eb;
+            color: white;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h2>Login Form</h2>
+
+        <form action="#" method="post">
+
+            <!-- Hidden session information -->
+            <input type="hidden" name="session_id" value="SESSION12345">
+
+            <input type="hidden" name="user_type" value="student">
+
+            <label>Username</label>
+            <input type="text" name="username">
+
+            <label>Password</label>
+            <input type="password" name="password">
+
+            <button type="submit">Login</button>
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>

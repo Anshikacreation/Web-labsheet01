@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Custom Controls</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            padding: 40px;
+            background: #f8fafc;
+        }
+        
+        .option {
+            margin: 15px 0;
+        }
+        
+        input {
+            display: none;
+        }
+        
+        label {
+            position: relative;
+            padding-left: 35px;
+            cursor: pointer;
+        }
+        /* Checkbox */
+        
+        .checkbox+label::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: -3px;
+            width: 20px;
+            height: 20px;
+            border: 2px solid #2563eb;
+            border-radius: 4px;
+        }
+        
+        .checkbox:checked+label::after {
+            content: "✓";
+            position: absolute;
+            left: 4px;
+            top: -3px;
+            color: #2563eb;
+            font-weight: bold;
+        }
+        /* Radio */
+        
+        .radio+label::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: -3px;
+            width: 20px;
+            height: 20px;
+            border: 2px solid #16a34a;
+            border-radius: 50%;
+        }
+        
+        .radio:checked+label::after {
+            content: "";
+            position: absolute;
+            left: 5px;
+            top: 2px;
+            width: 12px;
+            height: 12px;
+            background: #16a34a;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Custom Form Controls</h2>
+
+    <div class="option">
+        <input type="checkbox" id="html" class="checkbox">
+        <label for="html">HTML</label>
+    </div>
+
+    <div class="option">
+        <input type="checkbox" id="css" class="checkbox">
+        <label for="css">CSS</label>
+    </div>
+
+    <h3>Gender</h3>
+
+    <div class="option">
+        <input type="radio" id="male" name="gender" class="radio">
+        <label for="male">Male</label>
+    </div>
+
+    <div class="option">
+        <input type="radio" id="female" name="gender" class="radio">
+        <label for="female">Female</label>
+    </div>
+
+</body>
+
+</html>

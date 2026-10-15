@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Grouped Form</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #f3f4f6;
+            padding: 40px;
+        }
+        
+        form {
+            max-width: 600px;
+            margin: auto;
+        }
+        
+        fieldset {
+            background: white;
+            border: 2px solid #2563eb;
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 20px;
+        }
+        
+        legend {
+            background: #2563eb;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 5px;
+        }
+        
+        input,
+        select {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0 15px;
+        }
+        
+        button {
+            padding: 12px 25px;
+            background: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form>
+
+        <fieldset>
+            <legend>Personal Information</legend>
+
+            <label>Name</label>
+            <input type="text">
+
+            <label>Email</label>
+            <input type="email">
+
+            <label>Phone</label>
+            <input type="tel">
+        </fieldset>
+
+        <fieldset>
+            <legend>Education</legend>
+
+            <label>Course</label>
+            <select>
+            <option>MCA</option>
+            <option>BCA</option>
+            <option>BSc</option>
+        </select>
+
+            <label>College</label>
+            <input type="text">
+        </fieldset>
+
+        <button type="submit">Submit</button>
+
+    </form>
+
+</body>
+
+</html>

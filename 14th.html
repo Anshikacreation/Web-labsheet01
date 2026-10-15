@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Range and Number Input</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #f1f5f9;
+            padding: 50px;
+        }
+        
+        .box {
+            max-width: 500px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+        }
+        
+        input {
+            margin: 15px 0;
+        }
+        
+        #rangeValue {
+            font-weight: bold;
+            color: #2563eb;
+        }
+        
+        #numberValue {
+            font-weight: bold;
+            color: #16a34a;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+
+        <h2>Product Settings</h2>
+
+        <label>Volume:</label>
+
+        <input type="range" id="range" min="0" max="100" value="50">
+
+        <span id="rangeValue">50%</span>
+
+        <br><br>
+
+        <label>Quantity:</label>
+
+        <input type="number" id="number" min="1" max="10" value="1">
+
+        <span id="numberValue">1 items</span>
+
+    </div>
+
+    <script>
+        const range = document.getElementById("range");
+        const rangeValue = document.getElementById("rangeValue");
+
+        range.addEventListener("input", function() {
+            rangeValue.textContent = range.value + "%";
+        });
+
+        const number = document.getElementById("number");
+        const numberValue = document.getElementById("numberValue");
+
+        number.addEventListener("input", function() {
+            numberValue.textContent = number.value + " items";
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Contact Us</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            margin: 0;
+            font-family: Arial;
+            background: #f1f5f9;
+        }
+        
+        .contact {
+            max-width: 1000px;
+            margin: 50px auto;
+            background: white;
+            display: flex;
+            gap: 30px;
+            padding: 30px;
+            border-radius: 10px;
+        }
+        
+        .form-section,
+        .info-section {
+            flex: 1;
+        }
+        
+        input,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0 15px;
+        }
+        
+        textarea {
+            height: 120px;
+        }
+        
+        button {
+            padding: 12px 25px;
+            background: #2563eb;
+            color: white;
+            border: none;
+        }
+        
+        .info-section {
+            background: #eff6ff;
+            padding: 25px;
+        }
+        
+        @media (max-width: 700px) {
+            .contact {
+                flex-direction: column;
+                margin: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="contact">
+
+        <div class="form-section">
+
+            <h2>Contact Us</h2>
+
+            <form>
+
+                <label>Name</label>
+                <input type="text" placeholder="Your name">
+
+                <label>Email</label>
+                <input type="email" placeholder="Your email">
+
+                <label>Message</label>
+                <textarea placeholder="Your message"></textarea>
+
+                <button type="submit">Send Message</button>
+
+            </form>
+
+        </div>
+
+        <div class="info-section">
+
+            <h2>Our Location</h2>
+
+            <p><strong>Company:</strong> ABC Technologies</p>
+
+            <p><strong>Address:</strong> Main Road, Saharanpur, Uttar Pradesh
+            </p>
+
+            <p><strong>Phone:</strong> +91 9876543210</p>
+
+            <p><strong>Email:</strong> info@example.com</p>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

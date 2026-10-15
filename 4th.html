@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Flexbox layout</title>
+
+    <style>
+        body {
+            margin: 0;
+        }
+        
+        .header {
+            height: 80px;
+            background: lightblue;
+            text-align: center;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        
+        .container {
+            display: flex;
+            height: 400px;
+        }
+        
+        .nav {
+            width: 25%;
+            background: lightgrey;
+            padding: 20px;
+        }
+        
+        .content {
+            width: 75%;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <h2>My Website</h2>
+    </div>
+
+    <div class="nav">
+        <h3>Navigation</h3>
+        <p>Home</p>
+        <p>About</p>
+        <p>Content</p>
+    </div>
+
+    <div class="content">
+        <h2>content</h2>
+        <p>Welcome to my Website</p>
+    </div>
+</body>
+
+</html>

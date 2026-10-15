@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Newsletter Subscription</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #eef2ff;
+            font-family: Arial;
+        }
+        
+        .newsletter {
+            width: 400px;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        h2 {
+            text-align: center;
+        }
+        
+        .input-box {
+            position: relative;
+            margin: 30px 0;
+        }
+        
+        .input-box input {
+            width: 100%;
+            padding: 14px 10px;
+            border: 2px solid #aaa;
+            border-radius: 5px;
+            outline: none;
+        }
+        
+        .input-box label {
+            position: absolute;
+            left: 10px;
+            top: 14px;
+            color: #777;
+            background: white;
+            padding: 0 5px;
+            transition: 0.3s;
+            pointer-events: none;
+        }
+        
+        .input-box input:focus {
+            border-color: #2563eb;
+        }
+        
+        .input-box input:focus+label,
+        .input-box input:not(:placeholder-shown)+label {
+            top: -9px;
+            font-size: 13px;
+            color: #2563eb;
+        }
+        
+        button {
+            width: 100%;
+            padding: 13px;
+            border: none;
+            background: #2563eb;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        button:hover {
+            background: #1d4ed8;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="newsletter">
+
+        <h2>Subscribe to Newsletter</h2>
+
+        <p>Get the latest updates directly in your inbox.</p>
+
+        <form>
+
+            <div class="input-box">
+
+                <input type="email" id="email" placeholder=" " required>
+
+                <label for="email">Email Address</label>
+
+            </div>
+
+            <button type="submit">
+            Subscribe
+        </button>
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>

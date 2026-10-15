@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Two Column Form</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f3f4f6;
+            padding: 40px;
+        }
+        
+        .form-container {
+            max-width: 700px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        label {
+            margin-bottom: 7px;
+            font-weight: bold;
+        }
+        
+        input,
+        select {
+            padding: 10px;
+            border: 1px solid #aaa;
+            border-radius: 5px;
+        }
+        
+        .full {
+            grid-column: 1 / 3;
+        }
+        
+        button {
+            padding: 12px;
+            background: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="form-container">
+
+        <h2>Student Registration</h2>
+
+        <form class="form-grid">
+
+            <div class="form-group">
+                <label>First Name</label>
+                <input type="text" placeholder="First Name">
+            </div>
+
+            <div class="form-group">
+                <label>Last Name</label>
+                <input type="text" placeholder="Last Name">
+            </div>
+
+            <div class="form-group">
+                <label>Email</label>
+                <input type="email" placeholder="Email">
+            </div>
+
+            <div class="form-group">
+                <label>Phone</label>
+                <input type="tel" placeholder="Phone">
+            </div>
+
+            <div class="form-group full">
+                <label>Course</label>
+                <select>
+                <option>MCA</option>
+                <option>BCA</option>
+                <option>BSc CS</option>
+            </select>
+            </div>
+
+            <div class="form-group full">
+                <button type="submit">Register</button>
+            </div>
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>

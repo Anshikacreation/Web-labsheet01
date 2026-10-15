@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Payment Gateway</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial;
+            background: #e2e8f0;
+            padding: 30px;
+        }
+        
+        .payment {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+        }
+        
+        .row {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .field {
+            flex: 1;
+        }
+        
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        
+        input {
+            width: 100%;
+            padding: 12px;
+        }
+        
+        button {
+            width: 100%;
+            padding: 14px;
+            margin-top: 20px;
+            background: #16a34a;
+            color: white;
+            border: none;
+        }
+        
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            .row {
+                flex-direction: column;
+                gap: 0;
+            }
+            .payment {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="payment">
+
+        <h2>Payment Gateway</h2>
+
+        <form>
+
+            <label>Card Holder Name</label>
+            <input type="text" placeholder="Name on card">
+
+            <label>Card Number</label>
+            <input type="text" placeholder="1234 5678 9012 3456">
+
+            <div class="row">
+
+                <div class="field">
+                    <label>Expiry Date</label>
+                    <input type="month">
+                </div>
+
+                <div class="field">
+                    <label>CVV</label>
+                    <input type="password" placeholder="123">
+                </div>
+
+            </div>
+
+            <button type="submit">Pay Now</button>
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>
